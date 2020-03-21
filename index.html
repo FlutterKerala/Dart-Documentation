@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart Documentation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <header>Dart Documentation</header>
+        </div>
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#Dart" class="nav-link">Dart</a>
+        <a href="#Variables" class="nav-link">Variables</a>
+        <a href="#Data_Types" class="nav-link">Data Types</a>
+        <a href="#Operators" class="nav-link">Operators</a>
+        <a href="#Loops" class="nav-link">Loops</a>
+        <a href="#Collections" class="nav-link">Collections</a>
+        <a href="#Functions" class="nav-link">Functions</a>
+        <a href="#Arrow_Syntax" class="nav-link">Arrow Syntax</a>
+        <a href="#What's_Next" class="nav-link">What's Next</a>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>Dart was released by Google in 2011 and was initially designed as a replacement for JavaScript. Since then, the release of the Flutter SDK for iOS, Android, and web development has put a new spotlight on the Dart language. The most recent
+                version of Dart at the time of this recording is 2.4. Dart has many similarities to other languages you may already be familiar with, such as Java, C#, Swift, and Kotlin. Dart has the following language characteristics: <br/>
+                <ul>
+                    <li>statically typed</li>
+                    <li>Type inference</li>
+                    <li>String expressions</li>
+                    <li>Multi-paradigm including OOP and functional</li>
+                    <li>Supports lists, sets, and maps</li>
+                    <li>Can mimic dynamic types using dynamic</ul>
+            </p>
+        </section>
+        <section class="main-section" id="Dart">
+            <header>Dart</header>
+            <p>Dart programs begin with a call to the `main` function, and the syntax for `main` looks very similar to the syntax for `main` in other languages like C, Swift, or Kotlin. The main function is preceded by a return type, which in Dart is void,
+                meaning nothing is returned. The parentheses after main indicate that this is a function definition, and the curly braces contain the body of the function. Inside main, you add the Dart code for your program.</p>
+            <p>The Dart programming language is a general purpose programming language developed by Google. It is widely used at Google and the programming language Flutter development.</p>
+            <p>
+                <div class="code"><code>void main() { <br/>}</code></div>
+            </p>
+        </section>
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <p>The first thing we’ll add to main is a variable assignment statement. Variables hold the data that your program will work on. You can think of a variable like a box in your computer’s memory that holds a value. Each box has a name, the name
+                for the variable. You use the var keyword in Dart to denote a variable.</p>
+            <p>Comments in Dart look just like those in C in other languages: text either following // on a line, or text within /* … */ blocks.</p>
+            <p>Similar to many languages such as C, Java, Swift, and Kotlin, Dart is statically typed. That means that each variable in Dart has a type that must be known when the code is compiled, and the type of the variable cannot change when the program
+                is run. This contrasts with languages like Python and Javascript that are dynamically typed, meaning variables can hold different kinds of data when being run, and the type does not need to be known when the code is compiled.</p>
+        </section>
+        <section class="main-section" id="Data_Types">
+            <header>Data Types</header>
+            <p>Dart uses int for integers, double for floating points, and bool for booleans. ints and doubles are both derived from a type named num. You use the String type to represent sequences of characters. Dart also has a keyword dynamic which lets
+                you mimic dynamic typing in the statically typed Dart.</p>
+            <img src="datatypes.png" alt="data-types" />
+        </section>
+        <section class="main-section" id="Operators">
+            <header>Operators</header>
+            <p>Dart has all the usual operators you’re familiar with from other languages like C, Swift, and Kotlin. There are arithmetic operators, equality, increment and decrement, comparison, and logical operators. Dart also allows for operator overloading
+                like C++ and Kotlin, but that’s beyond the scope of this tutorial.</p>
+            <p>The Dart string type is String. Strings are expressed in Dart using text surrounded by either single or double quotes. Like for the other types we've seen, you can use either var and type inference or String to create a string variable. Similar
+                to languages like Kotlin and Swift, you can embed values and expressions inside strings to create new strings, using the dollar sign symbol $. You can combine adjacent strings, for example, long strings that go multiple lines, simply by
+                placing the strings next to one another or on separate lines. You can also combine strings using the + operator. You can use triple quotes to have a string run multiple lines and preserve formatting.</p>
+            <p>If you need to have escape sequences shown within the string, you can use raw strings, which are prefixed by r.<br/><br/>
+                <div class="code"><code>var rawString = r"If you can't explain it simply\nyou don't understand it well enough.";<br/> print(rawString);
+                    <br/> // If you can't explain it simply\nyou don't understand it well enough.</code></div>
+
+            </p>
+        </section>
+        <section class="main-section" id="Loops">
+            <header>Loops</header>
+            <p>Control flow lets you dictate that certain lines of code are executed, skipped over, or repeated. Control flow is handled in Dart with conditionals and loops.</p>
+            <h3>Conditionals</h3>
+            <p>The most basic form of control flow is deciding whether to execute or skip over certain parts of your code, depending on conditions that occur as your program runs. The language construct for handling conditions is the if/else statement. if/else
+                in Dart looks nearly identical to the use in other C-like languages.</p>
+            <h3>While Loops</h3>
+            <p>Loops let you repeat code a certain number of times or based on certain conditions. The latter are handled by while loops. There are two forms of while loop in Dart, while and do-while. The difference is that for while, the loop condition
+                is before the code block, and in do-while the condition is after. So for do-while, the code block is guaranteed to run at least one time.</p>
+            <p>
+                <div class="code"><code>if (animal == 'cat' || animal == 'dog') {<br/> print('Animal is a house pet.');<br/> } else if (animal == 'rhino') {<br/> print('That\'s a big animal.');<br/> } else {<br/> print('Animal is NOT a house pet.');<br/> }
+                    <br/> // Animal is NOT a house pet.<br/></code></div>
+            </p>
+            <h3>Continue and Break</h3>
+            <p>Dart has the usual continue and break keywords for use in loops and elsewhere. continue will skip remaining code inside a loop and immediately go to the next iteration. break stops the loop and continues execution after the body of the loop.
+                You must be careful when using continue in your code. For example, if you take the do-while loop from above, and say you want to continue when i is equal to 5, that could result in an infinite loop that just keeps running, depending in
+                where you place the continue statement:</p>
+            <h3>For Loops</h3>
+            <p>The loops that loop a pre-determined number of times are for loops in Dart, which once again are very similar to those from other languages. Dart has both a C-like form of a for loop, with an initialization, loop condition, and an action,
+                as well a for-in loop for iterating over a collection of objects. In the first form, the initialization runs before the first loop iteration. The condition is checked on entering each iteration, and the action is run before starting the
+                next iteration. For the for-in form, a variable is set to each element in a collection of Dart objects for each subsequent iteration of the loop. Let's say you want to sum up the values of the first 10 integers.</p>
+            <h3>Switch and Enum</h3>
+            <p>switch and enum Dart also has support for a switch statement and enumerations using enum. Consult the Dart documentation for more on both. Like most of the rest of the Dart constructs you've seen, they work similarly to how they work in other
+                languages like C and Java.</p>
+        </section>
+        <section class="main-section" id="Collections">
+            <header>Collections</header>
+            <p>ist, Set, Map and Queue are the collection classes implemented in Dart. In the following Dart Tutorials, we walk you through these Collection classes and different properties and operations that could be performed on them. In Dart, List is
+                a collection of elements that can belong to different types. Also, elements in list are indexed. We can perform different operations of List with the help of built-in properties and methods of List class or primitive conditional and Looping
+                statements.
+            </p>
+            <p>A very commonly used collection in programming is an array. Dart represents arrays in the form of List objects. A List is simply an ordered group of objects. The dart:core library provides the List class that enables creation and manipulation
+                of lists.</p>
+            <h3>Dart Lists</h3>
+            <p>A list is referenced by a variable name. The items in the list can be accessed using index. Index starts with 0. Arrays is a common concept in most of the programming languages. In Dart, there is no specific class for Arrays. Dart Lists serve
+                the purpose of Array concept. In Dart programming language, there are two types of lists based on eligibility of list to change in length:
+                <ul>
+                    <li>Fixed Length Lists</li>
+                    <li>Growable Lists</li>
+                </ul>
+                <p>In Dart, Fixed Length Lists are the lists which are defined with specific length.<br/><br/>There are two ways in which you can define a Growable List in Dart. They are:
+                    <ol>
+                        <li>Assign a List of items directly to a variable.</li>
+                        <li>Create an empty list with no arguments passed to List() in new List()</li>
+                    </ol>
+                </p>
+            </p>
+            <h3>Dart Maps</h3>
+            <p>The Map object is a simple key/value pair. Keys and values in a map may be of any type. A Map is a dynamic collection. In other words, Maps can grow and shrink at runtime. Maps can be declared in two ways −
+                <ul>
+                    <li>Using Map Literals</li>
+                    <li>Using a Map constructor</ul>
+            </p>
+            <p>To declare a map using map literals, you need to enclose the key-value pairs within a pair of curly brackets "{ }".<br/> To declare a Map using a Map constructor, we have two steps. First, declare the map and second, initialize the map.</p>
+        </section>
+        <section class="main-section" id="Functions">
+            <header>Functions</header>
+            <p>Functions let you package multiple related lines of code into a single body that you can summon to avoid repeating those lines of code throughout your Dart application.</p>
+            <img src="functions.png" alt="functions">
+            <p>A function consists of a return type, a function name, a parameter list in parentheses, and then a function body enclosed in braces. The code you're turning into the function goes inside the braces. When you call the function, you pass in
+                arguments that match the types of the parameters of the function.</p>
+            <p>Typically, functions are defined either outside other functions or inside Dart classes, but you can also nest Dart functions in one another. For example, you can add the functions in this section inside main. Functions can be classified into
+                First-Class, Anonymous, Arrow Functions etc.</p>
+        </section>
+        <section class="main-section" id="Arrow_Syntax">
+            <header>Arrow Syntax</header>
+            <p>When a Dart function, either named or anonymous, consists of just one line of code, you can reduce the function body using the Dart arrow syntax.<br/>For example, multiply above becomes:<br/><br/>
+                <div class="code"><code>var multiply = (int a, int b) => a * b;</code></div><br/>You've removed the braces and the return statement.<br/><br/>You can also use arrow syntax with applyMultiplier:<br/><br/>
+                <div class="code"><code>Function applyMultiplier(num multiplier) =><br/> (num value) => value * multiplier;</code></div>
+            </p>
+            <p>You've used arrow syntax twice here: the first is denoting the return value for the applyMultiplier function, the second is within the return value itself, which is an anonymous function.</p>
+        </section>
+        <section class="main-section" id="What's_Next">
+            <header>What's Next</header>
+            <p>Check out the official Dart documentation to learn about intermediate and advanced parts of Dart:<br/>
+                <ul>
+                    <li>Iterables and Generators</li>
+                    <li>Exceptions</li>
+                    <li>Runes and symbols</li>
+                    <li>Asynchronous Dart with isolates, streams, futures and async/await</li>
+                </ul>
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
